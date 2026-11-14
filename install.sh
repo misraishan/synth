@@ -9,7 +9,7 @@
 # picks where the binary goes; ~/.local/bin otherwise.
 set -eu
 
-repo="aw1875/synth"
+repo="synth-sh/synth"
 
 say() {
     printf 'synth: %s\n' "$1"

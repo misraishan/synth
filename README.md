@@ -22,14 +22,14 @@ The [script](install.sh) checks the download against the release's checksums.
 ## Install with Homebrew
 
 ```sh
-brew tap aw1875/synth https://github.com/aw1875/synth.git
-brew install aw1875/synth/synth
+brew tap synth-sh/synth https://github.com/synth-sh/synth.git
+brew install synth-sh/synth/synth
 ```
 
 The tap lives in this repository. The explicit Git URL is required because its
 name does not start with `homebrew-`. The formula downloads the published binary
 for macOS arm64 or Linux x86-64; Zig is not required. It currently tracks the
-rolling [`dev` prerelease](https://github.com/aw1875/synth/releases/tag/dev),
+rolling [`dev` prerelease](https://github.com/synth-sh/synth/releases/tag/dev),
 and the release workflows update its version, URLs, and checksums after publishing.
 A model server with tool-call support is still required.
 
@@ -37,7 +37,7 @@ To update to the latest published build:
 
 ```sh
 brew update
-brew upgrade aw1875/synth/synth
+brew upgrade synth-sh/synth/synth
 ```
 
 ## Build from source

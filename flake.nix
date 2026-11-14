@@ -28,24 +28,13 @@
       system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        synthTools = [
-          zig.packages.${system}."0.16.0"
-          zls.packages.${system}.zls
-        ];
       in
       {
-        devShells = {
-          default = pkgs.mkShell {
-            packages = synthTools;
-          };
-        }
-        // pkgs.lib.optionalAttrs (system == "aarch64-darwin") {
-          desktop = pkgs.mkShellNoCC {
-            packages = synthTools ++ [
-              pkgs.swiftlint
-              pkgs.xcodegen
-            ];
-          };
+        devShells.default = pkgs.mkShell {
+          packages = [
+            zig.packages.${system}."0.16.0"
+            zls.packages.${system}.zls
+          ];
         };
       }
     );

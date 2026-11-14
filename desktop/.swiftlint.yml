@@ -1,6 +1,0 @@
-excluded:
-  - .build
-  - .swiftpm
-  - DerivedData
-nesting:
-  type_level: 4

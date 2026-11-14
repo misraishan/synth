@@ -102,7 +102,7 @@ jobs:
   homebrew:
     name: Propose Homebrew update
     needs: release
-    if: github.repository == 'aw1875/synth'
+    if: github.repository == 'synth-sh/synth'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:

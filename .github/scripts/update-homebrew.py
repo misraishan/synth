@@ -25,10 +25,10 @@ def main():
         archive = args.archives / f"synth-{version}-{target}.tar.gz"
         checksums[target] = hashlib.sha256(archive.read_bytes()).hexdigest()
 
-    base_url = f"https://github.com/aw1875/synth/releases/download/v{version}"
+    base_url = f"https://github.com/synth-sh/synth/releases/download/v{version}"
     updated = f'''class Synth < Formula
   desc "Terminal coding agent for local and hosted models"
-  homepage "https://github.com/aw1875/synth"
+  homepage "https://github.com/synth-sh/synth"
   version "{version}"
   license "MIT"
 
